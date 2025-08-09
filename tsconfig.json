@@ -2,7 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "rollup/parseAst": ["node_modules/rollup/dist/parseAst.d.ts"]
     }
   },
   "files": [],
