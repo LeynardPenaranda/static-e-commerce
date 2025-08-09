@@ -1,12 +1,11 @@
-const API_URL = "/api/items";
+const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "") + "/api/items";
 
-//get All the items from the api
+// get All the items from the api
 export async function getItems() {
   const res = await fetch(API_URL);
   if (!res.ok) {
     throw new Error("Failed to fetch items");
   }
-
   const data = await res.json();
   console.log(data);
   return data;
